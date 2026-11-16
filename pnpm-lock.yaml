@@ -15,8 +15,8 @@ importers:
         specifier: ^5.16.6
         version: 5.16.6(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(supports-color@7.2.0)(typescript@5.9.3)(yaml@2.7.1)
       astro-theme-doksam:
-        specifier: github:LeeYudok/astro-theme-doksam#v0.1.0
-        version: https://codeload.github.com/LeeYudok/astro-theme-doksam/tar.gz/a4ece0b20e191eef40670d9bc56e8e7050c41e62(astro@5.16.6(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(supports-color@7.2.0)(typescript@5.9.3)(yaml@2.7.1))
+        specifier: github:LeeYudok/astro-theme-doksam#v0.1.1
+        version: https://codeload.github.com/LeeYudok/astro-theme-doksam/tar.gz/bbab2ca4e041fad1bd79241cbe8c0aa545f0b678(astro@5.16.6(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(supports-color@7.2.0)(typescript@5.9.3)(yaml@2.7.1))
       remark-collapse:
         specifier: ^0.1.2
         version: 0.1.2
@@ -731,9 +731,9 @@ packages:
   array-iterate@2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
 
-  astro-theme-doksam@https://codeload.github.com/LeeYudok/astro-theme-doksam/tar.gz/a4ece0b20e191eef40670d9bc56e8e7050c41e62:
-    resolution: {gitHosted: true, integrity: sha512-wpBH9WUqu1Ox+kNqZTge0DP24PItWnB0RmEkm0wEsM+uuHgMi/q4fasblwVyTWJQ/g2NoaBi1jVWNFYSBH5OlA==, tarball: https://codeload.github.com/LeeYudok/astro-theme-doksam/tar.gz/a4ece0b20e191eef40670d9bc56e8e7050c41e62}
-    version: 0.1.0
+  astro-theme-doksam@https://codeload.github.com/LeeYudok/astro-theme-doksam/tar.gz/bbab2ca4e041fad1bd79241cbe8c0aa545f0b678:
+    resolution: {gitHosted: true, integrity: sha512-+Hl1T8Bp5YB6HZ12E40PwWTTrD/hsWkEhgz0W9B0epUtsZrM2/iel1Ol7mVJ6WLK+ImhItTgA0GLKuc6hw3zeQ==, tarball: https://codeload.github.com/LeeYudok/astro-theme-doksam/tar.gz/bbab2ca4e041fad1bd79241cbe8c0aa545f0b678}
+    version: 0.1.1
     peerDependencies:
       astro: ^5.0.0
 
@@ -2696,7 +2696,7 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-  astro-theme-doksam@https://codeload.github.com/LeeYudok/astro-theme-doksam/tar.gz/a4ece0b20e191eef40670d9bc56e8e7050c41e62(astro@5.16.6(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(supports-color@7.2.0)(typescript@5.9.3)(yaml@2.7.1)):
+  astro-theme-doksam@https://codeload.github.com/LeeYudok/astro-theme-doksam/tar.gz/bbab2ca4e041fad1bd79241cbe8c0aa545f0b678(astro@5.16.6(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(supports-color@7.2.0)(typescript@5.9.3)(yaml@2.7.1)):
     dependencies:
       '@astrojs/rss': 4.0.19
       astro: 5.16.6(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.41.1)(supports-color@7.2.0)(typescript@5.9.3)(yaml@2.7.1)
