@@ -26,6 +26,7 @@ export default defineConfig({
       sections: [
         { id: "market", label: { ko: "증시", en: "Markets" } },
         { id: "dev", label: { ko: "개발", en: "Dev" } },
+        { id: "travel", label: { ko: "여행", en: "Travel" } },
       ],
       nav: [{ label: { ko: "소개", en: "About" }, href: "/about" }],
       socials: [
