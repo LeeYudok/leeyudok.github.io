@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/AboutLayout.astro
+layout: astro-theme-doksam/layouts/Page.astro
 title: "About"
 ---
 

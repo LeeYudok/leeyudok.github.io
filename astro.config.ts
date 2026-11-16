@@ -1,5 +1,4 @@
-import { defineConfig, envField, fontProviders } from "astro/config";
-import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
@@ -8,73 +7,53 @@ import {
   transformerNotationHighlight,
   transformerNotationWordHighlight,
 } from "@shikijs/transformers";
-import { transformerFileName } from "./src/utils/transformers/fileName";
-import { SITE } from "./src/config";
+import doksam from "astro-theme-doksam";
 
 // https://astro.build/config
 export default defineConfig({
-  site: SITE.website,
-  i18n: {
-    defaultLocale: "ko",
-    locales: ["ko", "en"],
-    routing: {
-      prefixDefaultLocale: false,
-    },
-  },
+  site: "https://leeyudok.github.io/",
   integrations: [
-    sitemap({
-      filter: page => SITE.showArchives || !page.endsWith("/archives"),
+    doksam({
+      title: "덕삼ol이야기",
+      description: {
+        ko: "뉴월드 인생2회차 그리고 ... 증시, 개발, 생각을 기록합니다.",
+        en: "New World, 2nd playthrough, and ... Notes on markets, development, and thoughts.",
+      },
+      author: "leeyudok",
+      profile: "https://github.com/leeyudok",
+      defaultLocale: "ko",
+      locales: ["ko", "en"],
+      sections: [
+        { id: "market", label: { ko: "증시", en: "Markets" } },
+        { id: "dev", label: { ko: "개발", en: "Dev" } },
+      ],
+      nav: [{ label: { ko: "소개", en: "About" }, href: "/about" }],
+      socials: [
+        { label: "GitHub", href: "https://github.com/leeyudok", icon: "github-logo" },
+        {
+          label: "네이버 블로그",
+          href: "https://blog.naver.com/diablodok",
+          icon: "arrow-up-right",
+        },
+      ],
     }),
+    sitemap(),
   ],
   markdown: {
     remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
     shikiConfig: {
-      // For more themes, visit https://shiki.style/themes
       themes: { light: "min-light", dark: "night-owl" },
       defaultColor: false,
       wrap: false,
       transformers: [
-        transformerFileName({ style: "v2", hideDot: false }),
         transformerNotationHighlight(),
         transformerNotationWordHighlight(),
         transformerNotationDiff({ matchAlgorithm: "v3" }),
       ],
     },
   },
-  vite: {
-    // eslint-disable-next-line
-    // @ts-ignore
-    // This will be fixed in Astro 6 with Vite 7 support
-    // See: https://github.com/withastro/astro/issues/14030
-    plugins: [tailwindcss()],
-    optimizeDeps: {
-      exclude: ["@resvg/resvg-js"],
-    },
-  },
   image: {
     responsiveStyles: true,
     layout: "constrained",
-  },
-  env: {
-    schema: {
-      PUBLIC_GOOGLE_SITE_VERIFICATION: envField.string({
-        access: "public",
-        context: "client",
-        optional: true,
-      }),
-    },
-  },
-  experimental: {
-    preserveScriptOrder: true,
-    fonts: [
-      {
-        name: "Google Sans Code",
-        cssVariable: "--font-google-sans-code",
-        provider: fontProviders.google(),
-        fallbacks: ["monospace"],
-        weights: [300, 400, 500, 600, 700],
-        styles: ["normal", "italic"],
-      },
-    ],
   },
 });
