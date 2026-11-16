@@ -14,7 +14,7 @@ export default defineConfig({
   site: "https://leeyudok.github.io/",
   integrations: [
     doksam({
-      title: "덕삼ol이야기",
+      title: "덕삼ol야기",
       description: {
         ko: "뉴월드 인생2회차 그리고 ... 증시, 개발, 생각을 기록합니다.",
         en: "New World, 2nd playthrough, and ... Notes on markets, development, and thoughts.",

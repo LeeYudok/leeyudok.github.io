@@ -1,4 +1,4 @@
-# 덕삼ol이야기
+# 덕삼ol야기
 
 <https://leeyudok.github.io/> 의 원본이다. 증시 요약과 개발 글을 올린다.
 
